@@ -1,14 +1,11 @@
 
 package App;
 
-import com.mysql.cj.log.Log;
 import java.sql.Statement;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
 /**
@@ -119,8 +116,8 @@ public class LoginForm extends javax.swing.JFrame {
 // เมธอดที่ผู้ใช้สร้างขึ้นเองสามารถแก้ไขได้
     private void jLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jLoginActionPerformed
         //ประกาศตัวแปรสำหรับรับค่าจากฟอร์ม
-            String userName = this.jUserName.getText().toString();
-            String userPwd = this.jPassword.getText().toString();
+            String userName = this.jUserName.getText();
+            String userPwd = this.jPassword.getText();
             if(userName.isBlank() && userPwd.isBlank()){
                 JOptionPane.showMessageDialog(this,"กรุณาพิมพ์ชื่อผู้ใช้และรหัสผ่านด้วย");
                 jUserName.setText(null);
