@@ -89,6 +89,11 @@ public class LoginForm extends javax.swing.JFrame {
         jPanel2.add(jLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 180, -1, -1));
 
         jReset.setText("Reset");
+        jReset.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jResetActionPerformed(evt);
+            }
+        });
         jPanel2.add(jReset, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 180, -1, -1));
         jPanel2.add(jUserName, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 100, 180, -1));
         jPanel2.add(jPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 130, 180, -1));
@@ -161,6 +166,12 @@ public class LoginForm extends javax.swing.JFrame {
        nf.show();
         dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jResetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jResetActionPerformed
+                jUserName.setText(null);
+                jPassword.setText(null);
+                jUserName.requestFocus();
+    }//GEN-LAST:event_jResetActionPerformed
 
     /**
      * @param args the command line arguments
